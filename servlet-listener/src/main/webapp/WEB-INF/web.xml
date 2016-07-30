@@ -1,0 +1,32 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+		 http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+  
+  <context-param>
+    <param-name>DBUSER</param-name>
+    <param-value>badal</param-value>
+  </context-param>
+  <context-param>
+    <param-name>DBPWD</param-name>
+    <param-value>password</param-value>
+  </context-param>
+  <context-param>
+    <param-name>DBURL</param-name>
+    <param-value>jdbc:mysql://localhost/mysql_db</param-value>
+  </context-param>
+  
+  <listener>
+    <listener-class>com.training.listener.AppContextListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>com.training.listener.AppContextAttributeListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>com.training.listener.MySessionListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>com.training.listener.MyServletRequestListener</listener-class>
+  </listener>
+</web-app>
